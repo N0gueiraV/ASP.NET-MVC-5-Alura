@@ -109,6 +109,8 @@ namespace Aplicacao_alura_mvc.Controllers
             context.Fabricantes.Remove(fabricante);
             context.SaveChanges();
 
+            TempData["Message"] = "Fabricante " + fabricante.Nome.ToUpper() + " foi removido";
+
             return RedirectToAction("Index");
         }
 
